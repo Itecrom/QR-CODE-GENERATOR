@@ -89,3 +89,18 @@ def generate_qr_codes():
 
     except Exception as e:
         messagebox.showerror("Error", str(e))
+    
+    # ---------- Other Functions ----------
+def open_folder():
+    output_dir = os.path.expanduser("~/Documents/qr_codes")
+    if not os.path.exists(output_dir):
+        messagebox.showinfo("Info", "No folder found yet. Generate QR codes first.")
+        return
+    if platform.system() == "Windows":
+        subprocess.Popen(f'explorer "{output_dir}"')
+    else:
+        subprocess.Popen(["open", output_dir])
+
+
+def open_link(url):
+    webbrowser.open(url)
