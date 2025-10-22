@@ -89,7 +89,6 @@ def generate_qr_codes():
 
     except Exception as e:
         messagebox.showerror("Error", str(e))
-    
     # ---------- Other Functions ----------
 def open_folder():
     output_dir = os.path.expanduser("~/Documents/qr_codes")
@@ -104,3 +103,51 @@ def open_folder():
 
 def open_link(url):
     webbrowser.open(url)
+
+# ---------- GUI Setup ----------
+root = tk.Tk()
+root.title("ITEC ICT SOLUTIONS – QR Code Gen")
+root.configure(bg="#2E2E2E")
+root.geometry("700x700")
+
+# --- Set custom ITEC icon (title bar + taskbar) ---
+try:
+    root.iconbitmap("itec_logo.ico")  # Replace with your ITEC .ico file path
+except Exception:
+    print("Custom icon not found or invalid.")
+
+# Allow resizing
+root.columnconfigure(0, weight=1)
+root.rowconfigure(0, weight=1)
+
+# ---------- Main Frame ----------
+main_frame = tk.Frame(root, bg="#2E2E2E")
+main_frame.grid(sticky="nsew")
+main_frame.columnconfigure(0, weight=1)
+
+# ---------- Logo & Title ----------
+tk.Label(main_frame, text="ITEC ICT SOLUTIONS", fg="white", bg="#2E2E2E",
+         font=("Arial", 20, "bold")).grid(row=0, column=0, pady=(10, 0), sticky="n")
+tk.Label(main_frame, text="QR CODE GEN", fg="white", bg="#2E2E2E",
+         font=("Arial", 14)).grid(row=1, column=0, pady=(0, 10), sticky="n")
+
+# ---------- Input Frame ----------
+input_frame = tk.Frame(main_frame, bg="#2E2E2E")
+input_frame.grid(row=2, column=0, sticky="nsew", padx=10)
+for i in range(2):
+    input_frame.columnconfigure(i, weight=1)
+
+fields = [
+    ("Title (e.g. CRS):", "title_entry"),
+    ("Initial Number / Prefix (e.g. MW-BT00200):", "mid_prefix_entry"),
+    ("District (e.g. Blantyre/BT):", "district_entry"),
+    ("Number of QR Codes:", "num_entry"),
+    ("Optional Random Numbers (comma-separated):", "random_entry")
+]
+
+for idx, (label, var_name) in enumerate(fields):
+    tk.Label(input_frame, text=label, fg="white", bg="#2E2E2E",
+             font=("Arial", 10, "bold")).grid(row=idx, column=0, sticky="e", pady=4, padx=5)
+    entry = tk.Entry(input_frame, width=30, bg="white", fg="black")
+    entry.grid(row=idx, column=1, sticky="ew", pady=4, padx=5)
+    globals()[var_name] = entry
