@@ -7,7 +7,6 @@
 It was designed out of necessity during fieldwork projects for the **Centre for Social Research (CSR)** and **Catholic Relief Services (CRS)**, where hundreds of QR-coded identification cards had to be produced quickly and efficiently.
 
 ---
-
 ## 🏗️ Background & Motivation
 During the development of digital survey tools for CSR and CRS, a key requirement was to print physical cards — each embedded with a unique QR code.  
 
@@ -20,7 +19,6 @@ Online QR code generators, however, demanded **manual entry for every single cod
 This challenge inspired the creation of **ITEC ICT QR CODE GEN** — a fully automated QR code generator capable of producing **hundreds or thousands of QR codes** at the click of a button.
 
 ---
-
 ## ⚙️ Features
 
 - ✅ **Batch QR Code Generation** — generate any number of QR codes automatically.  
@@ -34,7 +32,6 @@ This challenge inspired the creation of **ITEC ICT QR CODE GEN** — a fully aut
 - 💻 **Standalone Executable (.exe)** — runs on all Windows computers without setup.
 
 ---
-
 ## 🧭 How to Use
 
 1. **Launch** the app:  
@@ -62,7 +59,6 @@ This challenge inspired the creation of **ITEC ICT QR CODE GEN** — a fully aut
    - Use the “Open Folder” option in the app to instantly view your QR codes.
 
 ---
-
 ## 🧩 Installation (EXE Installer)
 
 ### 📦 Option 1 — Using the Executable Directly
@@ -99,7 +95,6 @@ dist\qrcode.exe
 ```
 
 ---
-
 ## 💡 Future Enhancements
 
 Planned features include:
@@ -111,7 +106,6 @@ Planned features include:
 * 🖨️ Built-in **printing and layout** options
 
 ---
-
 ## 🧑‍💻 Developer Information
 
 **Developer:** Leonard J.J. Mhone
@@ -121,23 +115,11 @@ Planned features include:
 **Year:** 2025
 
 ---
-
 ## 📜 License
 
 © 2025 ITEC ICT Solutions. All rights reserved.
 Unauthorized duplication, modification, or distribution of this software is prohibited.
 
 ---
-
-## 🖼️ Screenshots (optional)
-
-You may include screenshots of the app interface here:
-
-```
-/screenshots/mainwindow.png
-```
-
----
-
 **ITEC ICT QR CODE GEN** —
 *“Automating QR creation, one code at a time.”*
